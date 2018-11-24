@@ -3,18 +3,18 @@ difference() {
         cube([240,20, 4]);
         cube([240, 4, 40]);
         translate([0, 20, 0]) {
-            cube([240, 4, 40]);
+            cube([240, 4, 60]);
         }
         for (i = [40 : 40 : 200]) { 
             translate([i - 1.5, 0, 0]) {
-                cube([3, 20, 30]);
+                cube([3, 20, 40]);
             }
         }
     }
     for (i = [20 : 40 : 220]) {
         translate([i, 0, 20]) {
-            rotate([90, 0, 0]) {
-                cylinder(60, d = 15, center = true);
+            rotate([120, 0, 0]) {
+                cylinder(80, d = 15, center = true);
             }
         }
     }
