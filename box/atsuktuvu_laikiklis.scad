@@ -1,4 +1,4 @@
-length = 300;
+length = 140;
 hole_space = 20;
 pertvaros = [hole_space * 1.5 : hole_space * 4 : length];
 wall = 1.6;
@@ -39,13 +39,13 @@ difference() {
     translate([40, 10, 1.5]) {
         hole();
     }
-    translate([length - 40, 10, 0]) {
+    translate([length - 40, 10, 1.5]) {
         hole();
     }
-    translate([length / 4 + 20, 10, 0]) {
-        hole();
+    translate([length / 8 + 20, 10, 0]) {
+    //    hole();
     }
     translate([length / 4 * 3 - 20, 10, 0]) {
-        hole();
+    //    hole();
     }
 }
