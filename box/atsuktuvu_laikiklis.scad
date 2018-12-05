@@ -17,12 +17,7 @@ difference() {
         difference() {
             for (i = pertvaros) { 
                 translate([i - 1.5, 0, 0]) {
-                    cube([2, 20, 50]);
-                }
-            }
-            translate([0, 0, 25]) {
-                rotate([30, 0, 0]) {
-                    cube([length,40, 30]);
+                    cube([wall, 20, 40]);
                 }
             }
         }
