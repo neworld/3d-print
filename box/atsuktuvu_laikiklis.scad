@@ -12,7 +12,7 @@ difference() {
         cube([length,20, 3]);
         cube([length, wall, 40]);
         translate([0, 20, 0]) {
-            cube([length, wall, 50]);
+            cube([length, wall, 40]);
         }
         difference() {
             for (i = pertvaros) { 
@@ -20,8 +20,8 @@ difference() {
                     cube([2, 20, 50]);
                 }
             }
-            translate([0, 0, 30]) {
-                rotate([45, 0, 0]) {
+            translate([0, 0, 25]) {
+                rotate([30, 0, 0]) {
                     cube([length,40, 30]);
                 }
             }
