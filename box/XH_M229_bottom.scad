@@ -1,3 +1,4 @@
+$fn = 60;
 wall = 2;
 
 tolerance_x = 0.5;
@@ -63,7 +64,7 @@ module rail(position) {
 }
 
 module screen_screw_hole(position) {
-    screw_hole = 2.5 + tolerance_x;
+    screw_hole = 2.5;
     translate(position) {
         cylinder(total_depth + wall, d = screw_hole, true);
     }
