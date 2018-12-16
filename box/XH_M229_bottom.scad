@@ -1,7 +1,11 @@
 wall = 2;
 
+tolerance_x = 0.5;
+tolerance_y = 0.5;
+tolerance_z = 0.2;
+
 screw_padding = 1.86;
-screw = 3.3;
+screw = 3.3 + tolerance_x;
 screw_distance = screw_padding + screw / 2;
 screew_plate = screw_padding*2+screw;
 depth_below = 9;
@@ -19,7 +23,7 @@ module screw_hole(position) {
 }
 
 module main_box() {
-    thickness = 1.8;
+    thickness = 1.8 + tolerance_z;
     length_between_screw_h = 118.45;
     length_between_screw_w = 38.4;
     inner_wall = wall;
@@ -59,7 +63,7 @@ module rail(position) {
 }
 
 module screen_screw_hole(position) {
-    screw_hole = 2.5;
+    screw_hole = 2.5 + tolerance_x;
     translate(position) {
         cylinder(total_depth + wall, d = screw_hole, true);
     }
@@ -67,7 +71,7 @@ module screen_screw_hole(position) {
 
 module gauge_box() {
     screw_padding = 1.3;
-    pcb_tickness = 1.55;
+    pcb_tickness = 1.55 + tolerance_z;
     padding = 10;
     width = screen_total_width + padding * 2;
     screen_count = 3;
